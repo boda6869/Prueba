@@ -1,5 +1,4 @@
-archivo: index.php*
-```
+
 <?php
 // Incluir el archivo de albumes
 require_once 'albumes.php';
@@ -13,4 +12,3 @@ foreach ($albumes as $album) {
 }
 
 ?>
-```

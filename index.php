@@ -1,39 +1,16 @@
-
+archivo: index.php*
+```
 <?php
-// Configuración de la conexión
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "prueba";
+// Incluir el archivo de albumes
+require_once 'albumes.php';
 
-// Crear la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Obtener todos los álbumes
+$albumes = obtenerAlbumes();
 
-// Verificar la conexión
-if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
+// Mostrar los álbumes
+foreach ($albumes as $album) {
+  echo "ID: " . $album["AlbumId"]. " - Título: " . $album["Title"]. " - Artista ID: " . $album["ArtistId"]. "<br>";
 }
 
-// Función para obtener datos
-function obtenerDatos() {
-  $sql = "SELECT * FROM tabla_prueba";
-  $result = $conn->query($sql);
-  $datos = array();
-  while($row = $result->fetch_assoc()) {
-    $datos[] = $row;
-  }
-  return $datos;
-}
-
-// Función para cerrar la conexión
-function cerrarConexion() {
-  $conn->close();
-}
-
-// Llamar a la función obtenerDatos
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-  $datos = obtenerDatos();
-  echo json_encode($datos);
-  cerrarConexion();
-}
 ?>
+```

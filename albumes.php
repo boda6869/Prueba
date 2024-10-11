@@ -1,7 +1,7 @@
 
 <?php
 // Incluir el archivo de conexión
-require_once 'conexion.php';
+require_once 'conexión.php';
 
 // Función para obtener todos los álbumes
 function obtenerAlbumes() {

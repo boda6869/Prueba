@@ -1,7 +1,7 @@
 
 <?php
 // Incluir el archivo de albumes
-require_once 'albumes.php';
+require_once 'álbumes.php';
 
 // Obtener todos los álbumes
 $albumes = obtenerAlbumes();

@@ -2,8 +2,8 @@
 <?php
 // Configuración de la conexión
 $servername = "localhost";
-$username = "tu_usuario";
-$password = "tu_contraseña";
+$username = "root";
+$password = "";
 $dbname = "prueba";
 
 // Crear la conexión
